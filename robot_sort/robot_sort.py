@@ -114,6 +114,8 @@ class SortingRobot:
                 elif self.compare_item() == -1:
                     self.swap_item()
                     self.move_right()
+                else:
+                    self.move_right()
             if self.light_is_on():
                 if self.compare_item() == None:
                     self.swap_item()
@@ -126,6 +128,8 @@ class SortingRobot:
                     self.move_left()
                 elif self.compare_item() == 1:
                     self.swap_item()
+                else:
+                    self.move_left()
         while True:
             if self.compare_item() == None:
                 self.swap_item()
@@ -138,6 +142,8 @@ class SortingRobot:
             elif self.compare_item() == 1:
                 self.swap_item()
                 self.move_left()
+            else:
+                self.move_left()
         if self.compare_item() == None:
             self.swap_item()
 
@@ -147,7 +153,7 @@ if __name__ == "__main__":
     # with `python robot_sort.py`
 
     l = [1, -38, -95, 87, -57, -37, -65, -47, -3, 21, -77, 98, 25, 1, -
-         36, 39, 78, 47, -35, -40, -69, -81, 11, -47, 21, 25, -53, -31]
+         36]
 
     robot = SortingRobot(l)
 
